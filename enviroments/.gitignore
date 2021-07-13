@@ -1,0 +1,4 @@
+.idea
+mock/vault/data
+mock/vault/logs
+mock/vault/policies

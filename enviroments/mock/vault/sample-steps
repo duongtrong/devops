@@ -1,0 +1,32 @@
+install docker for desktop based on your OS
+make vault/data, vault\logs and vault/policies folder
+open 1st terminal and run docker-compose.yml
+open 2nd terminal and initialize vault
+    docker ps -> to get vault's docker container's id
+    docker exec -it <container_id> sh -> exec into vault container
+    vault operator init -> initialize vault, vault now should be in 'sealed' state, save the keys generated
+unseal vault before using
+    vault operator unsealed <unseal_key_1>
+    vault operator unsealed <unseal_key_2>
+    vault operator unsealed <unseal_key_3>
+    vault should be unsealed now
+login using root token
+vault login <root_token>
+or
+open vault UI: localhost:8200/ui and use <root_token> to login
+manage vault other via UI or API: https://www.vaultproject.io/api-docs and https://learn.hashicorp.com/vault/getting-started/policies
+
+Testing the policy:
+
+First, check to verify that KV v2 secrets engine has not been enabled at secret/.
+
+$ vault secrets list
+
+Path          Type         Accessor              Description
+----          ----         --------              -----------
+cubbyhole/    cubbyhole    cubbyhole_b81986c7    per-token private secret storage
+identity/     identity     identity_33dc5c7d     identity store
+sys/          system       system_ad432442       system endpoints used for control, policy and debugging
+If secret/ is not listed, enable it before proceeding.
+
+$ vault secrets enable -path=secret/ kv-v2

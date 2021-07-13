@@ -1,0 +1,420 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "Viettel Digital Service",
+    "description" : "Chuyển dịch công nghệ",
+    "contact" : {
+      "name" : "CDCN",
+      "url" : "https://transformation.digital.vn/"
+    },
+    "version" : "1.0.0"
+  },
+  "servers" : [ {
+    "url" : "http://localhost",
+    "description" : "Generated server url"
+  } ],
+  "paths" : {
+    "/bsa/v1/api/verify" : {
+      "post" : {
+        "operationId" : "verify",
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GeneralResponseObject"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "default response",
+            "content" : {
+              "*/*" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/bsa/v1/api/example/{id}" : {
+      "get" : {
+        "operationId" : "getExample",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "schema" : {
+            "type" : "integer",
+            "format" : "int64"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "default response",
+            "content" : {
+              "*/*" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/bsa/v1/api/auto-caching" : {
+      "get" : {
+        "operationId" : "autoCachingSample",
+        "responses" : {
+          "200" : {
+            "description" : "default response",
+            "content" : {
+              "*/*" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/bsa/v1/api/manual-caching" : {
+      "get" : {
+        "operationId" : "manualCachingSample",
+        "responses" : {
+          "200" : {
+            "description" : "default response",
+            "content" : {
+              "*/*" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/bsa/v1/api/initial-caching" : {
+      "get" : {
+        "operationId" : "initialCachingSample",
+        "responses" : {
+          "200" : {
+            "description" : "default response",
+            "content" : {
+              "*/*" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/bsa/v1/api/hello-world/{id}" : {
+      "get" : {
+        "tags" : [ "hello-world" ],
+        "summary" : "Hello world",
+        "operationId" : "helloWorld",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "ID of Hello world",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          },
+          "examples" : {
+            "Example 1" : {
+              "description" : "Example 1",
+              "value" : 1
+            },
+            "Example 2" : {
+              "description" : "Example 2",
+              "value" : 2
+            }
+          }
+        }, {
+          "name" : "name",
+          "in" : "query",
+          "description" : "Name Query",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          },
+          "example" : "hoadx"
+        }, {
+          "name" : "age",
+          "in" : "query",
+          "description" : "Age Query",
+          "required" : false,
+          "schema" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "example" : 18
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "examples" : {
+                  "This is sample response" : {
+                    "summary" : "Sample Response",
+                    "description" : "This is sample response",
+                    "value" : {
+                      "firstField" : "sample",
+                      "secondField" : "sample"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "hello-world" ],
+        "summary" : "Hello World",
+        "operationId" : "helloWorldPost",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "ID of Hello world",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "description" : "Sample Request",
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/ExampleRequestDTO"
+              },
+              "examples" : {
+                "This is sample request" : {
+                  "summary" : "Sample Request",
+                  "description" : "This is sample request",
+                  "value" : {
+                    "firstField" : "sample",
+                    "secondField" : "sample"
+                  }
+                }
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "examples" : {
+                  "This is sample response" : {
+                    "summary" : "Sample Response",
+                    "description" : "This is sample response",
+                    "value" : {
+                      "status" : {
+                        "code" : "00",
+                        "message" : "Success"
+                      },
+                      "data" : {
+                        "firstField" : "sample value",
+                        "secondField" : "sample value"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/bsa/v1/api/vault/kv/sample" : {
+      "get" : {
+        "operationId" : "getSecretKV",
+        "responses" : {
+          "200" : {
+            "description" : "default response",
+            "content" : {
+              "*/*" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/bsa/v1/api/vault/sign" : {
+      "post" : {
+        "operationId" : "signData",
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/VaultSignData"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "default response",
+            "content" : {
+              "*/*" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/bsa/v1/api/vault/verify" : {
+      "post" : {
+        "operationId" : "verifyData",
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/VaultSignData"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "default response",
+            "content" : {
+              "*/*" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/bsa/v1/api/vault/transit/create" : {
+      "post" : {
+        "operationId" : "addVaultSample",
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/VaultSampleEntity"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "default response",
+            "content" : {
+              "*/*" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/bsa/v1/api/vault/transit" : {
+      "get" : {
+        "operationId" : "getAllVaultSamples",
+        "responses" : {
+          "200" : {
+            "description" : "default response",
+            "content" : {
+              "*/*" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "GeneralResponseObject" : {
+        "type" : "object",
+        "properties" : {
+          "status" : {
+            "$ref" : "#/components/schemas/ResponseStatus"
+          },
+          "data" : {
+            "type" : "object"
+          }
+        }
+      },
+      "ResponseStatus" : {
+        "type" : "object",
+        "properties" : {
+          "code" : {
+            "type" : "string"
+          },
+          "message" : {
+            "type" : "string"
+          }
+        }
+      },
+      "ExampleRequestDTO" : {
+        "type" : "object",
+        "properties" : {
+          "firstField" : {
+            "type" : "string"
+          },
+          "secondField" : {
+            "type" : "string"
+          }
+        }
+      },
+      "VaultSignData" : {
+        "type" : "object",
+        "properties" : {
+          "input" : {
+            "type" : "string"
+          },
+          "signature" : {
+            "type" : "string"
+          }
+        }
+      },
+      "VaultSampleEntity" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "encryptField" : {
+            "type" : "string"
+          },
+          "rawField" : {
+            "type" : "string"
+          }
+        }
+      }
+    }
+  }
+}

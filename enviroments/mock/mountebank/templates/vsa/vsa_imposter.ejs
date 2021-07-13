@@ -1,0 +1,47 @@
+{
+  "port": 8097,
+  "protocol": "http",
+  "allowCORS": true,
+  "stubs": [
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "GET"
+          }
+        },
+        {
+          "deepEquals": {
+            "path": "/switching/configuration-portal/v1/users/menus"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "Access-Control-Allow-Origin": "http://192.90.90.38:5200",
+              "Access-Control-Allow-Methods": "GET",
+              "Access-Control-Allow-Headers": "Content-Type,x-request-sample",
+              "Access-Control-Allow-Credentials": true,
+              "X-Content-Type-Options": "nosniff",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "application/json;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./vsa/vsa_response_list.ejs') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    }
+  ]
+}

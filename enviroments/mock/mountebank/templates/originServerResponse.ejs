@@ -1,0 +1,32 @@
+{
+    "port": 5555,
+    "protocol": "http",
+    "name": "origin",
+    "stubs": [
+      {
+        "predicates": [
+          {
+            "contains": {
+              "headers": {
+                "Content-Type": "xml"
+              }
+            }
+          }
+        ],
+        "responses": [
+          {
+            "is": {
+              "body": "<%- stringify('originXMLResponse.ejs') %>"
+            }
+          }
+        ]
+      },
+      {
+        "responses": [
+          {
+            "inject": "<%- stringify('originServerResponse.ejs') %>"
+          }
+        ]
+      }
+    ]
+  }

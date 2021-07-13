@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <NS1:submitRequestResponse xmlns:NS1="http://bussiness">
+         <submitRequestReturn>&lt;DOCUMENT&gt;&lt;MESSAGEID&gt;1100&lt;/MESSAGEID&gt;&lt;SCID&gt;1652199&lt;/SCID&gt;&lt;TNXREF&gt;140&lt;/TNXREF&gt;&lt;BATCHDATE&gt;04/11/2011&lt;/BATCHDATE&gt;&lt;TRANSTATE&gt;140&lt;/TRANSTATE&gt;&lt;SIGNATUREBIDV&gt;B7ErrssTHoMTsk3x1vbryNMSTePx9yBqXnMH/pbzPeKbr4WS0iAkmHnABJyoe21uqglOkmtBNEqV/MCu3G6W0/3Q3+SlsEROl7SeEJ27NSPj3ANrilddcNgMqc0gcvaK3sdJEOkdg2KN6XsbnhkDj2QBtfSaDUh2Qhh4L1ASUu1/BlUkfe3ZIQeVCGyhTrpFdwbYqdQD3b1LiYMtnuSGi2U1gZqf4ZxJR8H7uNjHPb5DVgWfQfSlD4xqU/54A8fg5uIpqFJBltat0om/yDhgETG45Fvkqe03BA7yCHrIalbGt/SWdAZQCWgIQpdleMA3BtOgf8IkuMtsXBPvuvymOQ==&lt;/SIGNATUREBIDV&gt;&lt;/DOCUMENT&gt;</submitRequestReturn>
+      </NS1:submitRequestResponse>
+   </soapenv:Body>
+</soapenv:Envelope>

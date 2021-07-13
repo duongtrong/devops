@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "name": "management.health.db.default.enabled",
+      "type": "java.lang.String",
+      "description": "Enable health check for default database."
+    },
+    {
+      "name": "app.datasource.default.enable",
+      "type": "java.lang.String",
+      "description": "Enable default datasource or not (enable as default)."
+    },
+    {
+      "name": "app.datasource.secondary.enable",
+      "type": "java.lang.String",
+      "description": "Enable secondary datasource or not (disable as default)."
+    }
+  ] }

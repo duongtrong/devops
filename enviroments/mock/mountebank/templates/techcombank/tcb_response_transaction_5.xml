@@ -1,0 +1,20 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <S:Body xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+      <v1:InqTxStsRspn xmlns:v1="http://www.techcombank.com.vn/services/bank/collection/v1">
+         <v1:RspnInf>
+            <v1:Id>20200311FICO6</v1:Id>
+            <v1:TxId>2301202022033</v1:TxId>
+            <v1:CreDtTm>2020-03-25T16:31:15.899+07:00</v1:CreDtTm>
+         </v1:RspnInf>
+         <v1:RspnSts>
+            <v1:Sts>RCCF</v1:Sts>
+            <v1:AddtlStsRsnInf>000|Giao dich thanh cong - Success</v1:AddtlStsRsnInf>
+         </v1:RspnSts>
+         <v1:TxRcrd>
+            <v1:TxSts>5</v1:TxSts>
+            <v1:FeeAmt>Dang xu ly</v1:FeeAmt>
+            <v1:AddInf>Dang xu ly</v1:AddInf>
+         </v1:TxRcrd>
+      </v1:InqTxStsRspn>
+   </S:Body>
+</soapenv:Envelope>

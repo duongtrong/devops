@@ -1,0 +1,32 @@
+{
+    "port": 8090,
+    "protocol": "http",
+    "name": "bank1",
+    "stubs": [
+      {
+        "predicates": [
+          {
+            "contains": {
+              "headers": {
+                "Content-Type": "xml"
+              }
+            }
+          }
+        ],
+        "responses": [
+          {
+            "is": {
+              "body": "<%- stringify('bank1XMLResponse.ejs') %>"
+            }
+          }
+        ]
+      },
+      {
+        "responses": [
+          {
+            "inject": "<%- stringify('bank1Response.ejs') %>"
+          }
+        ]
+      }
+    ]
+  }

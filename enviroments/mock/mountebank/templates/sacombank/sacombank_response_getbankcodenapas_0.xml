@@ -1,0 +1,181 @@
+<DOCUMENT>
+    <TRANSACTION_ID>20200715114523057</TRANSACTION_ID>
+    <PARTNER_ID>VTPAY</PARTNER_ID>
+    <LOCAL_DATETIME>26/08/2018 05:06:41</LOCAL_DATETIME>
+    <TRANSACTION_STATUS>0</TRANSACTION_STATUS>
+    <ERROR_DESCRIPTION></ERROR_DESCRIPTION>
+    <LISTBANKCODE>
+        <BANKCODE>
+            <BANKCODE>970429</BANKCODE>
+            <BANKNAME>NH TMCP Sai Gon (SCB)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970400</BANKCODE>
+            <BANKNAME>NH TMCP Sai Gon Cong Thuong (Saigonbank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970427</BANKCODE>
+            <BANKNAME>NH TMCP Viet A (VietABank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970441</BANKCODE>
+            <BANKNAME>NH TMCP Quoc Te VN (VIB)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>422589</BANKCODE>
+            <BANKNAME>NH TNHH MTV CIMB Viet Nam (CIMB)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970431</BANKCODE>
+            <BANKNAME>NH TMCP Xuat Nhap khau VN (Eximbank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970436</BANKCODE>
+            <BANKNAME>NH TMCP Ngoai Thuong VN (VietcomBank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970407</BANKCODE>
+            <BANKNAME>NH TMCP Ky Thuong VN (Techcombank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970434</BANKCODE>
+            <BANKNAME>NH TNHH Indovina (Indovina Bank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970406</BANKCODE>
+            <BANKNAME>NH TMCP Dong A (DongA Bank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970408</BANKCODE>
+            <BANKNAME>NH TM TNHH MTV Dau Khi Toan Cau (GPBank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970409</BANKCODE>
+            <BANKNAME>NH TMCP Bac A (BacABank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970412</BANKCODE>
+            <BANKNAME>NH TMCP Dai Chung VN (PVcombank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970414</BANKCODE>
+            <BANKNAME>NH TM TNHH MTV Dai Duong (OceanBank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970416</BANKCODE>
+            <BANKNAME>NH TMCP A Chau (ACB)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970421</BANKCODE>
+            <BANKNAME>NH Lien Doanh Viet Nga (VRB)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970422</BANKCODE>
+            <BANKNAME>NH TMCP Quan Doi (MB)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970423</BANKCODE>
+            <BANKNAME>NH TMCP Tien Phong (TPBank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970424</BANKCODE>
+            <BANKNAME>NH TNHH MTV Shinhan VN (ShinhanBank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970426</BANKCODE>
+            <BANKNAME>NH TMCP Hang Hai VN (Maritime Bank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970428</BANKCODE>
+            <BANKNAME>NH TMCP Nam A (NamABank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970430</BANKCODE>
+            <BANKNAME>NH TMCP Xang Dau Petrolimex (PG Bank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970433</BANKCODE>
+            <BANKNAME>NH TMCP Viet Nam Thuong Tin (VietBank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970437</BANKCODE>
+            <BANKNAME>NH TMCP Phat Trien TP HCM (HDBank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970438</BANKCODE>
+            <BANKNAME>NH TMCP Bao Viet (BaoVietBank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970439</BANKCODE>
+            <BANKNAME>NH TNHH MTV Public VN</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970442</BANKCODE>
+            <BANKNAME>NH TNHH MTV Hongleong VN (HongleongBank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970443</BANKCODE>
+            <BANKNAME>NH TMCP Sai Gon Ha Noi (SHB)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970446</BANKCODE>
+            <BANKNAME>NH Hop Tac (Co op Bank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970448</BANKCODE>
+            <BANKNAME>NH TMCP Phuong Dong (OCB)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970449</BANKCODE>
+            <BANKNAME>NH TMCP Buu Dien Lien Viet (LienVietPostBank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970452</BANKCODE>
+            <BANKNAME>NH TMCP Kien Long (KienLongBank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970454</BANKCODE>
+            <BANKNAME>NH TMCP Ban Viet (Viet Capital Bank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970455</BANKCODE>
+            <BANKNAME>NH Cong Nghiep Han Quoc CN Ha Noi (IBK HN)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970457</BANKCODE>
+            <BANKNAME>NH Wooribank</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970425</BANKCODE>
+            <BANKNAME>NH TMCP An Binh (ABBank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970440</BANKCODE>
+            <BANKNAME>NH TMCP Dong Nam A(SeABank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970418</BANKCODE>
+            <BANKNAME>NH TMCP Dau Tu va Phat Trien VN (BIDV)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970415</BANKCODE>
+            <BANKNAME>NH TMCP Cong Thuong VN (Vietinbank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970432</BANKCODE>
+            <BANKNAME>NH TMCP Viet Nam Thinh Vuong (VP Bank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970405</BANKCODE>
+            <BANKNAME>NH Nong Nghiep Phat Trien Nong Thon VN (Agribank)</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970458</BANKCODE>
+            <BANKNAME>UOB - NH TNHH MTV United Overseas Bank (Viet Nam)\n</BANKNAME>
+        </BANKCODE>
+        <BANKCODE>
+            <BANKCODE>970419</BANKCODE>
+            <BANKNAME>NH TMCP Nam Viet (NVB)</BANKNAME>
+        </BANKCODE>
+    </LISTBANKCODE>
+</DOCUMENT>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>vn.com.viettel.vds</groupId>
+        <artifactId>java-spring-parent-pom</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>vn.com.viettel.vds</groupId>
+    <artifactId>java-spring-api-arch</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>java-spring-api-arch</name>
+    <description>Spring APIArch</description>
+
+    <properties>
+        <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
+        <springfox-swagger-ui.version>2.9.2</springfox-swagger-ui.version>
+        <hibernate.version>5.4.0.Final</hibernate.version>
+        <liquibase.referenceUrl>hibernate:spring:com.exemple.app.domain?dialect=org.hibernate.dialect.H2Dialect&amp;hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy&amp;hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy</liquibase.referenceUrl>
+    </properties>
+
+    <dependencies>
+
+        <!-- Caching -->
+        <dependency>
+            <groupId>com.github.ben-manes.caffeine</groupId>
+            <artifactId>caffeine</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.lettuce</groupId>
+            <artifactId>lettuce-core</artifactId>
+            <version>5.2.1.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+        </dependency>
+        <!-- End Caching -->
+
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.0.4.RELEASE</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.zalando/logbook-spring-boot-starter -->
+        <dependency>
+            <groupId>org.zalando</groupId>
+            <artifactId>logbook-spring-boot-starter</artifactId>
+            <version>2.1.0</version>
+        </dependency>
+        
+        <!-- Database-->
+        <dependency>
+            <groupId>org.mariadb.jdbc</groupId>
+            <artifactId>mariadb-java-client</artifactId>
+            <version>2.4.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>1.3.1.Final</version>
+        </dependency>
+
+        <!-- Logging dependencies -->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+        </dependency>
+
+        <!-- Swagger 2 - OpenAPI 3 -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-core</artifactId>
+            <version>1.1.49</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>io.github.classgraph</groupId>
+                    <artifactId>classgraph</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>1.1.49</version>
+        </dependency>
+
+        <!-- Vault -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-vault-config</artifactId>
+            <version>2.2.1.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-vault-config-databases</artifactId>
+            <version>2.2.1.RELEASE</version>
+        </dependency>
+        <!-- End Vault -->
+
+        <!-- Config Client -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+            <version>2.1.0.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-kafka</artifactId>
+            <version>2.2.0.RELEASE</version>
+        </dependency>
+
+        <!-- End Config Client -->
+
+
+    </dependencies>
+
+    <repositories>
+<!--                <repository>-->
+<!--                    <id>maven.oracle.com</id>-->
+<!--                    <name>oracle-maven-repo</name>-->
+<!--                    <url>https://maven.oracle.com</url>-->
+<!--                    <layout>default</layout>-->
+<!--                    <releases>-->
+<!--                        <enabled>true</enabled>-->
+<!--                        <updatePolicy>always</updatePolicy>-->
+<!--                    </releases>-->
+<!--                </repository>-->
+<!--        <repository>-->
+<!--            <snapshots>-->
+<!--                <enabled>false</enabled>-->
+<!--            </snapshots>-->
+<!--            <id>central2</id>-->
+<!--            <name>libs-release</name>-->
+<!--            <url>http://125.235.38.228:8081/artifactory/libs-release</url>-->
+<!--        </repository>-->
+<!--        <repository>-->
+<!--            <snapshots/>-->
+<!--            <id>snapshots2</id>-->
+<!--            <name>libs-snapshot</name>-->
+<!--            <url>http://125.235.38.228:8081/artifactory/libs-snapshot</url>-->
+<!--        </repository>-->
+    </repositories>
+<!--        <pluginRepositories>-->
+<!--            <pluginRepository>-->
+<!--                <id>maven.oracle.com</id>-->
+<!--                <name>oracle-maven-repo</name>-->
+<!--                <url>https://maven.oracle.com</url>-->
+<!--                <layout>default</layout>-->
+<!--                <releases>-->
+<!--                    <enabled>true</enabled>-->
+<!--                    <updatePolicy>always</updatePolicy>-->
+<!--                </releases>-->
+<!--            </pluginRepository>-->
+<!--        </pluginRepositories>-->
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.4.0.905</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <!-- Required so that .gitignore gets included in archetypes -->
+                    <!-- see https://issues.apache.org/jira/browse/MRESOURCES-190 -->
+                    <addDefaultExcludes>false</addDefaultExcludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <!--
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId> -->
+                <!-- or newer version -->
+                <configuration>
+                    <source>${maven.compiler.source}</source> <!-- depending on your project -->
+                    <target>${maven.compiler.source}</target> <!-- depending on your project -->
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
+                        </path>
+
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>1.3.1.Final</version>
+                        </path>
+
+                        <!-- other annotation processors -->
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+
+            <plugin>
+
+                <groupId>de.jpdigital</groupId>
+                <artifactId>hibernate50-ddl-maven-plugin</artifactId>
+                <version>2.3.0</version>
+                <configuration>
+                    <dialects>
+                        <param>mariadb</param>
+                    </dialects>
+                    <outputDirectory>${basedir}/sql</outputDirectory>
+                    <createDropStatements>true</createDropStatements>
+                    <omitDialectFromFileName>true</omitDialectFromFileName>
+                    <outputFileNameSuffix>create</outputFileNameSuffix>
+                    <packages>
+                        <param>vn.com.viettel.vds.model.entity</param>
+                    </packages>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>gen-ddl</goal>
+                        </goals>
+                        <phase>compile</phase>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

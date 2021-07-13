@@ -1,0 +1,21 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <S:Body xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+      <v1:XferRspn xmlns:v1="http://www.techcombank.com.vn/services/bank/collection/v1">
+         <v1:RspnInf>
+            <v1:Id>20200311FICO6</v1:Id>
+            <v1:TxId>2301202022033</v1:TxId>
+            <v1:CreDtTm>2020-03-25T16:31:15.899+07:00</v1:CreDtTm>
+            <v1:Desc/>
+            <v1:Sgntr>NO SIGNATURE</v1:Sgntr>
+         </v1:RspnInf>
+         <v1:RspnSts>
+            <v1:Sts>RCCF</v1:Sts>
+            <v1:AddtlStsRsnInf>SOA-002|Validate action fail</v1:AddtlStsRsnInf>
+         </v1:RspnSts>
+         <v1:TxInf>
+            <v1:RefId>VINFAST.2301202022033</v1:RefId>
+            <v1:FeeAmt>0</v1:FeeAmt>
+         </v1:TxInf>
+      </v1:XferRspn>
+   </S:Body>
+</soapenv:Envelope>

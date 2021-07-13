@@ -1,0 +1,27 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <ns:queryTransactionStatusResponse xmlns:ns="http://vn.vib.fastpay.erp">
+         <ns:return xsi:type="ax25:RsERPLinkGetListTransObject" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ax25="http://object.vn.vib.fastpay.erp/xsd">
+            <ax25:errorObject xsi:type="ax25:ErrorObject">
+               <ax25:errorCode>CK0000</ax25:errorCode>
+               <ax25:message>Client key valid</ax25:message>
+            </ax25:errorObject>
+            <ax25:totalRecords>0</ax25:totalRecords>
+            <ax25:listTrans>
+                <ax25:amount>200000</ax25:amount>
+                <ax25:bank_status>COMPLETED</ax25:bank_status>
+                <ax25:billno></ax25:billno>
+                <ax25:ccy>VND</ax25:ccy>
+                <ax25:customer_status></ax25:customer_status>
+                <ax25:erp_trans_id></ax25:erp_trans_id>
+                <ax25:fromaccount>020000597271</ax25:fromaccount>
+                <ax25:id></ax25:id>
+                <ax25:narrative>Request</ax25:narrative>
+                <ax25:servicetype></ax25:servicetype>
+                <ax25:toaccount>1012020034</ax25:toaccount>
+                <ax25:transid>FT17259KFT3T</ax25:transid>
+            </ax25:listTrans>
+         </ns:return>
+      </ns:queryTransactionStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>

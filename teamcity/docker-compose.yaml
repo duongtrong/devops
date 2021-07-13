@@ -1,0 +1,59 @@
+version: "3.3"
+
+services: 
+  teamcity-server:
+    image: jetbrains/teamcity-server:latest
+    container_name: teamcity-server
+    ports: 
+      - 8111:8111
+    volumes: 
+      - teamcity_data:/data/teamcity_server/datadir
+      - teamcity_log:/opt/teamcity/logs
+
+  teamcity-agent:
+    image: jetbrains/teamcity-agent:latest
+    container_name: teamcity-agent
+    environment: 
+      - SERVER_URL=http://192.168.0.100:8111
+    volumes: 
+      - teamcity_agent_config:/data/teamcity_agent/conf
+
+  teamcity-agent-docker:
+    image: jetbrains/teamcity-agent:latest
+    container_name: teamcity-agent-docker
+    environment: 
+      - SERVER_URL=http://192.168.0.100:8111
+    volumes: 
+      - teamcity_agent_config_docker:/data/teamcity_agent/conf
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /usr/bin/docker:/usr/bin/docker
+
+volumes: 
+  teamcity_data:
+    driver: local
+  teamcity_log:
+    driver: local
+  teamcity_agent_config:
+    driver: local
+  teamcity_agent_config_docker:
+    driver: local
+ 
+    docker run -it --name teamcity-server-instance  \
+    -v team_city_data:/data/teamcity_server/datadir \
+    -v team_city_log:/opt/teamcity/logs  \
+    -p 8111:8111 \
+    jetbrains/teamcity-server
+
+    docker run -it -e SERVER_URL="http://192.168.0.100:8111"  \ 
+    -v team_city_agent_config:/data/teamcity_agent/conf  \      
+    -d jetbrains/teamcity-agent
+
+    docker run -it -e SERVER_URL="http://192.168.0.100:8111"  \
+    -v team_city_agent_config_docker:/data/teamcity_agent/conf \
+    -v /var/run/docker.sock:/var/run/docker.sock  \
+    -v /usr/bin/docker:/usr/bin/docker \
+    -d jetbrains/teamcity-agent
+
+    docker run -it -e SERVER_URL="http://192.168.0.100:8111" --privileged -e DOCKER_IN_DOCKER=start -d jetbrains/teamcity-agent
+
+    docker run -it -e SERVER_URL="http://192.168.0.100:8111" -v /var/run/docker.sock:/var/run/docker.sock -d jetbrains/teamcity-agent

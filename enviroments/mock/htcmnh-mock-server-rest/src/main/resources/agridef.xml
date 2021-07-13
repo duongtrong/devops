@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE isopackager SYSTEM "genericpackager.dtd">
+
+<!-- Licensed to the Infomation Technology Center - Viettel Telecom. http://www.vietteltelecom.vn ISO 8583:1987 (ASCII) field descriptions for GenericPackager -->
+
+<isopackager>
+
+    <isofield class="org.jpos.iso.IFB_NUMERIC" name="MESSAGE TYPE INDICATOR" length="4" id="0"/>
+
+    <isofield class="org.jpos.iso.IFB_BITMAP" name="BIT MAP" length="16" id="1"/>
+
+    <isofield class="org.jpos.iso.IFB_NUMERIC" name="PROCESS CODE" length="6" id="3"/>
+
+    <isofield class="org.jpos.iso.IFB_NUMERIC" name="TRANSACTION AMOUNT" length="12" id="4"/>
+
+    <isofield class="org.jpos.iso.IFB_NUMERIC" name="TRANSMISSION DATE/TIME" length="14" id="7"/>
+
+    <isofield class="org.jpos.iso.IFB_NUMERIC" name="SYSTEM TRACE AUDIT NUMBER" length="6" id="11"/>
+
+    <isofield class="org.jpos.iso.IFB_NUMERIC" name="PROVINCE CODE" length="4" id="19"/>
+
+    <isofield class="org.jpos.iso.IFB_LLCHAR" name="SERVICE CODE" length="30" id="25"/>
+
+    <isofield class="org.jpos.iso.IFB_NUMERIC" name="TRANSACTION FEE" length="10" id="28"/>
+
+    <!--IFB_AMOUNT FIXED 9-->
+
+
+    <isofield class="org.jpos.iso.IFB_LLNUM" name="TELCO CODE" length="11" id="32"/>
+
+    <isofield class="org.jpos.iso.IFB_LLNUM" name="DATE OF ISSUE" length="11" id="33"/>
+
+    <isofield class="org.jpos.iso.IFB_NUMERIC" name="REFERENCE NUMBER" length="12" id="37"/>
+
+    <isofield class="org.jpos.iso.IF_CHAR" name="RESPONSE CODE" length="2" id="39"/>
+
+    <isofield class="org.jpos.iso.IF_CHAR" name="ACCOUNT TYPE" length="3" id="40"/>
+
+    <isofield class="org.jpos.iso.IF_CHAR" name="VIETTEL SHOP CODE" length="10" id="41"/>
+
+    <isofield class="org.jpos.iso.IF_CHAR" name="VT SHOP CODE" length="15" id="42"/>
+
+    <isofield class="org.jpos.iso.IFB_LLCHAR" name="MOBILE NUMBER RECEIVER" length="25" id="44"/>
+
+    <isofield class="org.jpos.iso.IFB_LLLCHAR" name="BALANCE" length="120" id="54"/>
+
+    <isofield class="org.jpos.iso.IFB_LLLCHAR" name="VIETTEL REQUEST ID" length="999" id="55"/>
+
+    <isofield class="org.jpos.iso.IFB_LLLCHAR" name="ACCOUNT NAME" length="999" id="58"/>
+
+    <isofield class="org.jpos.iso.IFB_LLLCHAR" name="MOBILE NUMBER" length="999" id="60"/>
+
+    <isofield class="org.jpos.iso.IFB_LLLCHAR" name="CUSTOMER GENDER" length="999" id="61"/>
+
+    <isofield class="org.jpos.iso.IFB_LLLCHAR" name="PASSWORD (CURRENT )" length="999" id="62"/>
+
+    <isofield class="org.jpos.iso.IFB_LLLCHAR" name="OTP" length="15" id="63"/>
+
+    <isofield class="org.jpos.iso.IFB_NUMERIC" name="ID TYPE" length="1" id="66"/>
+
+    <isofield class="org.jpos.iso.IFB_NUMERIC" name="NETWORK MANAGEMENT INFO CODE" length="4" id="70"/>
+
+    <isofield class="org.jpos.iso.IFB_NUMERIC" name="BIRTHDAY" length="6" id="73"/>
+
+    <isofield class="org.jpos.iso.IF_CHAR" name="TRANSACTION TYPE" length="10" id="80"/>
+
+    <isofield class="org.jpos.iso.IFB_NUMERIC" name="FEE SOURCE" length="1" id="82"/>
+
+    <isofield class="org.jpos.iso.IFB_LLCHAR" name="ADDITIONAL DATA" length="99" id="85"/>
+
+    <isofield class="org.jpos.iso.IFB_NUMERIC" name="ORINGINAL REQUEST ID" length="42" id="90"/>
+
+    <isofield class="org.jpos.iso.IF_CHAR" name="MOBILE STATUS" length="1" id="91"/>
+
+    <isofield class="org.jpos.iso.IF_CHAR" name="SERVICE INDICATOR" length="7" id="94"/>
+
+    <isofield class="org.jpos.iso.IF_CHAR" name="VT STAFF CODE" length="25" id="98"/>
+
+    <isofield class="org.jpos.iso.IFB_LLNUM" name="BANK BRANCH CODE" length="11" id="100"/>
+
+    <isofield class="org.jpos.iso.IFB_LLCHAR" name="BANK BRANCH NAME" length="17" id="101"/>
+
+    <isofield class="org.jpos.iso.IFB_LLCHAR" name="ACCOUNT NUMBER" length="28" id="102"/>
+
+    <isofield class="org.jpos.iso.IFB_LLNUM" name="CREDIT ACCOUNT NUMBER" length="25" id="103"/>
+
+    <isofield class="org.jpos.iso.IFB_LLLCHAR" name="IDENTITY NUMBER" length="100" id="104"/>
+
+    <isofield class="org.jpos.iso.IFB_LLLCHAR" name="PASSWORD (NEW)" length="999" id="105"/>
+
+    <isofield class="org.jpos.iso.IFB_LLCHAR" name="BENEFICARY IDENTITY NUMBER" length="25" id="106"/>
+
+    <isofield class="org.jpos.iso.IFB_LLCHAR" name="CARD SERIAL NUMBER" length="25" id="108"/>
+
+    <isofield class="org.jpos.iso.IFB_LLLCHAR" name="PROVINCE NAME" length="999" id="109"/>
+
+    <isofield class="org.jpos.iso.IFB_LLLCHAR" name="PLEACE OF ISSUE" length="999" id="110"/>
+
+    <isofield class="org.jpos.iso.IFB_LLLCHAR" name="CUSTOMER ADDRESS" length="999" id="111"/>
+
+    <isofield class="org.jpos.iso.IFB_LLLCHAR" name="MINI STATEMENT DATA" length="999" id="112"/>
+
+    <isofield class="org.jpos.iso.IFB_LLNUM" name="BANK SHOP CODE" length="11" id="113"/>
+
+    <isofield class="org.jpos.iso.IFB_LLLCHAR" name="BANK SHOP NAME" length="999" id="114"/>
+
+    <isofield class="org.jpos.iso.IFB_LLLCHAR" name="BEN_BANK_NAME" length="999" id="115"/>
+
+    <isofield class="org.jpos.iso.IFB_LLLCHAR" name="MESSAGE SIGNATURE" length="999" id="116"/>
+
+    <isofield class="org.jpos.iso.IFB_LLLCHAR" name="EMAIL ADDRESS" length="999" id="117"/>
+
+    <isofield class="org.jpos.iso.IFB_LLLCHAR" name="CONTENT DESCRIPTION TRANSACTION" length="999" id="118"/>
+
+    <isofield class="org.jpos.iso.IFB_LLLCHAR" name="BILLING CODE" length="999" id="119"/>
+
+    <isofield class="org.jpos.iso.IFB_LLLCHAR" name="BENEFICARY NAME" length="999" id="122"/>
+
+    <isofield class="org.jpos.iso.IFB_LLLCHAR" name="BENEFICARY CODE" length="999" id="123"/>
+
+    <isofield class="org.jpos.iso.IFB_LLLCHAR" name="CONTENT DESCRIPTION SERVICE" length="999" id="124"/>
+
+    <isofield class="org.jpos.iso.IFB_LLLCHAR" name="CUSTOMER CODE VT" length="999" id="125"/>
+
+    <isofield class="org.jpos.iso.IFB_LLLCHAR" name="BEN BANK BRANCH NAME" length="999" id="127"/>
+
+</isopackager>

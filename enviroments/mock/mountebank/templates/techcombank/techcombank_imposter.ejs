@@ -1,0 +1,2334 @@
+{
+  "port": 8092,
+  "protocol": "http",
+  "stubs": [
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "000"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_000.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "SOA-001"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_soa_001.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "SOA-002"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_soa_002.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "SOA-003"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_soa_003.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "SOA-004"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_soa_004.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "SOA-007"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_soa_007.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "SOA-008"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_soa_008.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "SOA-009"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_soa_009.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "SOA-010"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_soa_010.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "SOA-011"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_soa_011.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "T24-001"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_t24_001.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "T24-002"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_t24_002.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "T24-003"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_t24_003.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "T24-004"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_t24_004.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "T24-005"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_t24_005.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "T24-006"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_t24_006.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "T24-007"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_t24_007.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "T24-008"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_t24_008.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "T24-009"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_t24_009.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "T24-010"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_t24_010.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "T24-011"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_t24_011.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "T24-012"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_t24_012.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "T24-013"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_t24_013.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "T24-014"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_t24_014.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "T24-015"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_t24_015.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "T24-016"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_t24_016.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "T24-017"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_t24_017.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "T24-018"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_t24_018.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "TIMEOUT_000"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_000.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 60000
+          },
+          "_behaviors": {
+            "wait": 60000
+          }
+        }
+      ]
+    },
+
+
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:ReqTxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body":  "0;"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_transaction_0.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:ReqTxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body":  "1;"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_transaction_1.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:ReqTxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body":  "5;"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_transaction_5.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:ReqTxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body":  "9;"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_transaction_9.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:ReqTxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body":  null
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_transaction_null.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body":  "TIMEOUT_T"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_transaction_0.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 60000
+          },
+          "_behaviors": {
+            "wait": 60000
+          }
+        }
+      ]
+    },
+
+
+
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body":  "T115"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_soa_003.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:ReqTxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body":  "T115;"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_transaction_0.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        },
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_transaction_0.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        },
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_transaction_0.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "T211"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_soa_003.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:ReqTxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "T211;"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_transaction_0.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        },
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_transaction_0.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        },
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_transaction_0.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "L7"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_000.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "Y7"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_000.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "T401"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_soa_001.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "S7"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_soa_002.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "S8"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_soa_002.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        },
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_000.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "F8"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_soa_002.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        },
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_000.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "F9"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_000.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "path": "/api/v1/techcombank/soap"
+          }
+        },
+        {
+          "xpath": {
+            "selector" : "//xsd:TxId",
+            "ns": {
+              "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+              "xsd": "http://www.techcombank.com.vn/services/bank/collection/v1"
+            }
+          },
+          "deepEquals": {
+            "body": "F16"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_soa_002.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        },
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "X-Content-Type-Options": "nosniff",
+              "X-XSS-Protection": "1; mode=block",
+              "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+              "Pragma": "no-cache",
+              "Expires": "0",
+              "X-Frame-Options": "DENY",
+              "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+              "Content-Type": "text/xml;charset=UTF-8",
+              "Transfer-Encoding": "chunked",
+              "Connection": "close"
+            },
+            "body": "<%- stringify('./techcombank/tcb_response_000.xml') %>",
+            "_mode": "text",
+            "_proxyResponseTime": 117
+          },
+          "_behaviors": {
+            "wait": 117
+          }
+        }
+      ]
+    }
+  ]
+}

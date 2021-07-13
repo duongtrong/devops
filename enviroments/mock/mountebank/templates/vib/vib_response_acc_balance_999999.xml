@@ -1,0 +1,15 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <ns:getAccountBalanceResponse xmlns:ns="http://vn.vib.fastpay.erp">
+         <ns:return xsi:type="ax23:RsAccountBalanceObject" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ax23="http://object.vn.vib.fastpay.erp/xsd">
+            <ax23:errorObject xsi:type="ax23:ErrorObject">
+               <ax23:errorCode>999999</ax23:errorCode>
+               <ax23:message>Server request fail</ax23:message>
+            </ax23:errorObject>
+            <ax23:rqUID></ax23:rqUID>
+            <ax23:serverStatusCode></ax23:serverStatusCode>
+            <ax23:serverStatusDesc></ax23:serverStatusDesc>
+         </ns:return>
+      </ns:getAccountBalanceResponse>
+   </soapenv:Body>
+</soapenv:Envelope>

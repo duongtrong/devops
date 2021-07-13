@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <proxies>
+        <proxy>
+            <id>http</id>
+            <active>true</active>
+            <protocol>http</protocol>
+            <host>10.60.135.36</host>
+            <port>8800</port>
+            <nonProxyHosts>localhost|10.58.244.248</nonProxyHosts>
+        </proxy>
+        <proxy>
+            <id>https</id>
+            <active>true</active>
+            <protocol>https</protocol>
+            <host>10.60.135.36</host>
+            <port>8800</port>
+            <nonProxyHosts>localhost|10.58.244.248</nonProxyHosts>
+        </proxy>
+    </proxies>
+    <servers>
+    </servers>
+    <mirrors>
+        <mirror>
+            <id>central</id>
+            <name>Central without ssl</name>
+            <url>http://10.58.244.248:8081/repository/maven-public/</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+    </mirrors>
+</settings>

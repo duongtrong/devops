@@ -1,0 +1,166 @@
+version: '3'
+
+
+services:
+
+  mariadb:
+    image: mariadb/server:10.4
+    ports: 
+      - 5306:3306
+    command: --max_connections=1000
+    environment:
+      - MARIADB_ROOT_PASSWORD=smartosc123
+      - MARIADB_USER=htcmtest
+      - MARIADB_PASSWORD=htcmtest123
+      - MARIADB_DATABASE=chuyenmach
+    volumes:
+      - mariadb_volume:/var/lib/mysql
+    restart: always
+
+  redis:
+    image: redis:5.0.7
+    ports:
+      - 5379:6379
+    volumes:
+      - redis_volume:/data
+    restart: always
+
+  vds-htcmnh-frontend:
+    image: vds-htcmnh-frontend:latest
+    container_name: frontend-test
+    ports:
+      - 5200:4200
+    environment:
+      - BUILD_ENV=test
+    restart: always
+    networks:
+      - web
+
+  vds-htcmnh-bff-web:
+    image: vds-htcmnh-bff-web:latest
+    container_name: bff-web-test
+    ports:
+      - 9185:8080
+    environment:
+      - SPRING_PROFILES_ACTIVE=test
+    restart: always
+    networks:
+      - web
+      - backend
+
+  vds-htcmnh-configuration-service:
+    image: vds-htcmnh-configuration-service:latest
+    container_name: configuration-service-test
+    ports:
+      - 9285:8080
+    environment:
+      - SPRING_PROFILES_ACTIVE=test
+    restart: always
+    networks:
+      - backend
+
+  vds-htcmnh-payment-exchange-service:
+    image: vds-htcmnh-payment-exchange-service:latest
+    container_name: payment-exchange-service-test
+    ports:
+      - 9385:8080
+    environment:
+      - SPRING_PROFILES_ACTIVE=test
+    restart: always
+    volumes:
+      - /home/fintechtest/Documents/htcmnh/test/payment-service/logs:/logs
+    networks:
+      - backend
+
+  vds-htcmnh-timeout-service:
+    image: vds-htcmnh-timeout-service:latest
+    container_name: timeout-service-test
+    ports:
+      - 9585:8080
+    environment:
+      - SPRING_PROFILES_ACTIVE=test
+    restart: always
+    networks:
+      - backend
+        
+  vds-htcmnh-spi:
+    image: vds-htcmnh-spi:latest
+    container_name: spi-test
+    ports:
+      - 9485:8080
+    environment:
+      - SPRING_PROFILES_ACTIVE=test
+    restart: always
+    volumes: 
+      - /home/fintechtest/Documents/htcmnh/test/spi/logs:/logs
+    extra_hosts:
+      - "vault-alpha.digital.vn:10.255.133.69"
+    networks:
+      - backend
+      
+  vds-htcmnh-job-service:
+    image: vds-htcmnh-job-service:latest
+    container_name: job-service-test
+    ports:
+      - 9685:8080
+    environment:
+      - SPRING_PROFILES_ACTIVE=test
+    restart: always
+    networks:
+      - backend
+
+  mock-iso-server:
+    image: mock-iso-server:latest
+    container_name: iso-server-test
+    ports:
+      - 5500:5000
+      - 6500:6000
+    restart: always
+    networks:
+      - backend
+
+  zookeeper-server:
+    image: bitnami/zookeeper:latest
+    container_name: zookeeper-server-test
+    ports:
+    - 5181:2181
+    environment:
+    - ALLOW_ANONYMOUS_LOGIN=yes
+    restart: always
+    volumes:
+    - zookeeper_data:/bitnami
+    networks:
+    - backend
+
+  kafka-server:
+    image: bitnami/kafka:latest
+    container_name: kafka-server-test
+    ports:
+    - 5092:9092
+    environment:
+    - ALLOW_PLAINTEXT_LISTENER=yes
+    - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://192.90.90.38:5092
+    - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper-server:2181
+    restart: always
+    depends_on:
+    - zookeeper-server
+    volumes:
+    - kafka_data:/bitnami
+    networks:
+    - backend
+
+volumes:
+  mariadb_volume:
+    driver: local
+  redis_volume:
+    driver: local
+  zookeeper_data:
+    driver: local
+  kafka_data:
+    driver: local
+
+networks:
+  web:
+    driver: bridge
+  backend:
+    driver: bridge

@@ -1,0 +1,3635 @@
+{
+    "port": 8096,
+    "protocol": "http",
+    "stubs": [
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//ns2:submitRequest/strRequest",
+                        "ns": {
+                            "S": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "ns2": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { logger.info('request data: ', request.body); var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; logger.info('value after parse: ', errorCode); return errorCode == '101';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_101.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//ns2:submitRequest/strRequest",
+                        "ns": {
+                            "S": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "ns2": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { logger.info('request data: ', request.body); var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; logger.info('value after parse: ', errorCode); return errorCode == '000';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_000.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//ns2:submitRequest/strRequest",
+                        "ns": {
+                            "S": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "ns2": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { logger.info('request data: ', request.body); var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; logger.info('value after parse: ', errorCode); return errorCode == '001';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_001.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//ns2:submitRequest/strRequest",
+                        "ns": {
+                            "S": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "ns2": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { logger.info('request data: ', request.body); var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; logger.info('value after parse: ', errorCode); return errorCode == '005';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_005.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//ns2:submitRequest/strRequest",
+                        "ns": {
+                            "S": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "ns2": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { logger.info('request data: ', request.body); var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; logger.info('value after parse: ', errorCode); return errorCode == '007';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_007.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//ns2:submitRequest/strRequest",
+                        "ns": {
+                            "S": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "ns2": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { logger.info('request data: ', request.body); var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; logger.info('value after parse: ', errorCode); return errorCode == '014';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_014.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//ns2:submitRequest/strRequest",
+                        "ns": {
+                            "S": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "ns2": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '110';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=utf-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_110.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//ns2:submitRequest/strRequest",
+                        "ns": {
+                            "S": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "ns2": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '120';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_120.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//ns2:submitRequest/strRequest",
+                        "ns": {
+                            "S": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "ns2": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '130';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_130.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//ns2:submitRequest/strRequest",
+                        "ns": {
+                            "S": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "ns2": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '140';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_140.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '150';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_150.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '170';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_170.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '180';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_180.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '190';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_190.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '201';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_201.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '211';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_211.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '212';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_212.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '215';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_215.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '216';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_216.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '217';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_217.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '220';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_220.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '230';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_230.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '240';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_240.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '250';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_250.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '251';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_251.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '252';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_252.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '253';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_253.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '254';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_254.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '255';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_255.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '256';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_256.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '257';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_257.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '300';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_300.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '310';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_310.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '401';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_401.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '402';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_402.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '403';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_403.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '404';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_404.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '997';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_997.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '998';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_998.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '999';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_999.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '1001';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_1001.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '1002';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_1002.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '1003';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_1003.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '1004';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_1004.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '1005';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_1005.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == 'T113';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_130.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_0.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_1.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == 'T209';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_130.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_0.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_1.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '0';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_0.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '1';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_1.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == '2';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_2.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == 'T5';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_0.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_0.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_0.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_0.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_0.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_0.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_0.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_1.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == 'T16';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_0.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_0.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_0.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_0.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_0.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_0.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_0.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_0.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_2.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_1.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == 'T27';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_0.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_0.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_0.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_2.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_2.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_0.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_2.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//bus:submitRequest/strRequest",
+                        "ns": {
+                            "soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "bus": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; return errorCode == 'T28';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_0.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_0.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_0.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_2.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_2.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_0.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_0.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_timeout_2.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+
+
+
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//ns2:submitRequest/strRequest",
+                        "ns": {
+                            "S": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "ns2": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { logger.info('request data: ', request.body); var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; logger.info('value after parse: ', errorCode); return errorCode == 'S6';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_110.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_101.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_101.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//ns2:submitRequest/strRequest",
+                        "ns": {
+                            "S": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "ns2": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { logger.info('request data: ', request.body); var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; logger.info('value after parse: ', errorCode); return errorCode == 'F6';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_110.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_101.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_101.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//ns2:submitRequest/strRequest",
+                        "ns": {
+                            "S": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "ns2": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { logger.info('request data: ', request.body); var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; logger.info('value after parse: ', errorCode); return errorCode == 'S5';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_101.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//ns2:submitRequest/strRequest",
+                        "ns": {
+                            "S": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "ns2": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { logger.info('request data: ', request.body); var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; logger.info('value after parse: ', errorCode); return errorCode == 'S4';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_101.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//ns2:submitRequest/strRequest",
+                        "ns": {
+                            "S": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "ns2": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { logger.info('request data: ', request.body); var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; logger.info('value after parse: ', errorCode); return errorCode == 'L5';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_101.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//ns2:submitRequest/strRequest",
+                        "ns": {
+                            "S": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "ns2": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { logger.info('request data: ', request.body); var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; logger.info('value after parse: ', errorCode); return errorCode == 'Y5';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_000.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//ns2:submitRequest/strRequest",
+                        "ns": {
+                            "S": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "ns2": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { logger.info('request data: ', request.body); var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; logger.info('value after parse: ', errorCode); return errorCode == 'T410';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_1003.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "path": "/api/v1/bidv/rest/transfer"
+                    }
+                },
+                {
+                    "xpath": {
+                        "selector": "//ns2:submitRequest/strRequest",
+                        "ns": {
+                            "S": "http://schemas.xmlsoap.org/soap/envelope/",
+                            "ns2": "http://bussiness"
+                        }
+                    },
+                    "inject": "function (request, logger) { logger.info('request data: ', request.body); var DOMParser = require('xmldom').DOMParser; var parser = new DOMParser(); var dataStr = request.body.toString().replace(/\\s/g, ''); var xmlDoc = parser.parseFromString(dataStr, 'text/xml'); var strRequest = xmlDoc.getElementsByTagName('strRequest')[0].childNodes[0].nodeValue; xmlDoc = parser.parseFromString(strRequest, 'text/xml'); var errorCode = xmlDoc.getElementsByTagName('TNXREF')[0].childNodes[0].nodeValue; logger.info('value after parse: ', errorCode); return errorCode == 'F14';  }"
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_110.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_101.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "X-Content-Type-Options": "nosniff",
+                            "X-XSS-Protection": "1; mode=block",
+                            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                            "Pragma": "no-cache",
+                            "Expires": "0",
+                            "X-Frame-Options": "DENY",
+                            "Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+                            "Content-Type": "text/xml;charset=UTF-8",
+                            "Transfer-Encoding": "chunked",
+                            "Connection": "close"
+                        },
+                        "body": "<%- stringify('./bidv/bidv_response_101.xml') %>",
+                        "_mode": "text",
+                        "_proxyResponseTime": 117
+                    },
+                    "_behaviors": {
+                        "wait": 117
+                    }
+                }
+            ]
+        }
+    ]
+}
